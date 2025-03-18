@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* লোগো ব্যাকগ্রাউন্ড */
+body::before {
+    content: "";
+    background: url('https://raw.githubusercontent.com/SadiAlSabbir/Who-Am-I/main/src/logo.png') no-repeat center center;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    z-index: -1;
+    transition: background 0.5s ease-in-out;
+}
+
+.container {
+    z-index: 1;
+    font-size: 24px;
+    font-weight: bold;
+    transition: all 0.5s ease-in-out;
+}
+
+/* বাটনের ডিজাইন */
+button {
+    margin-top: 20px;
+    padding: 8px 15px;
+    font-size: 16px;
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+}
+
+/* গ্লিচ ইফেক্ট */
+.glitch {
+    animation: glitch-animation 0.2s infinite;
+}
+
+@keyframes glitch-animation {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(-2px, 2px); }
+    50% { transform: translate(2px, -2px); }
+    75% { transform: translate(-2px, -2px); }
+    100% { transform: translate(2px, 2px); }
+}
